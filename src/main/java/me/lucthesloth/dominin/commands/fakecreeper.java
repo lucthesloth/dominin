@@ -15,8 +15,8 @@ public class fakecreeper implements CommandExecutor {
         else {
             Dominin.target.playSound(Dominin.target.getLocation(), Sound.ENTITY_CREEPER_PRIMED, 2 ,1);
             sender.sendMessage("Played creeper sound at target.");
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

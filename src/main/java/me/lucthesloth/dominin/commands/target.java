@@ -14,15 +14,15 @@ public class target implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (args.length == 0) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cUsage: /target <player>"));
-            return false;
+            return true;
         }
         Player t = Bukkit.getPlayer(args[0]);
         if (t == null) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cPlayer not found."));
-            return false;
+            return true;
         }
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aTarget set to " + t.getName()));
         Dominin.target = t;
-        return true;
+        return false;
     }
 }

@@ -17,7 +17,8 @@ public class choruseffect implements org.bukkit.command.CommandExecutor{
             Dominin.target.teleport(l.getWorld().getHighestBlockAt(l).getLocation());
             Dominin.target.addPotionEffect(new PotionEffect(org.bukkit.potion.PotionEffectType.LEVITATION, 3, 1));
             sender.sendMessage("Teleported target.");
+            return false;
         }
-        return false;
+        return true;
     }
 }

@@ -18,8 +18,8 @@ public class bees implements org.bukkit.command.CommandExecutor{
                 b.setTarget(Dominin.target);
             }
             sender.sendMessage("Spawned bees at target.");
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

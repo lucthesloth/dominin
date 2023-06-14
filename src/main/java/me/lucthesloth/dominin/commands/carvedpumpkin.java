@@ -27,8 +27,8 @@ public class carvedpumpkin implements CommandExecutor {
                 }
             }, 20 * 30);
             sender.sendMessage("Gave carved pumpkin to target.");
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

@@ -33,8 +33,8 @@ public class dropitems implements org.bukkit.command.CommandExecutor{
                 }
             }, 20L, 60L);
             sender.sendMessage(String.format("Toggled drop items for %s. -> %s", Dominin.target.getName(), task == null ? "off" : "on"));
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

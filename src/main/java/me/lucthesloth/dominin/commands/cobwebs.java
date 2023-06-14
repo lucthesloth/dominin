@@ -9,10 +9,6 @@ import org.jetbrains.annotations.NotNull;
 public class cobwebs implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
-        if (!sender.hasPermission("dominin.cobwebs")) {
-            sender.sendMessage("No permission.");
-            return false;
-        }
         if (Dominin.target == null || !Dominin.target.isOnline())
             sender.sendMessage("No target.");
         else {
@@ -22,7 +18,8 @@ public class cobwebs implements CommandExecutor {
                 }
             }
             sender.sendMessage("Placed cobweb at target.");
+            return false;
         }
-        return false;
+        return true;
     }
 }

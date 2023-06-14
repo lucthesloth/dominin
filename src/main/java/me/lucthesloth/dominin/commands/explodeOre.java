@@ -14,8 +14,8 @@ public class explodeOre implements CommandExecutor {
         else {
             me.lucthesloth.dominin.EventListener.explodeNextOre = true;
             sender.sendMessage("Next ore will explode.");
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }
