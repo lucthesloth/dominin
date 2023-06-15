@@ -40,3 +40,7 @@ commands:
   ride:
     description: Makes player ride assortment of entities
     usage: /<command>
+  potion:
+    description: Gives player potion effect
+    usage: /<command>
+    aliases: [pe]
