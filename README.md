@@ -8,3 +8,8 @@ Commands:
 - /fakecreeper > plays creeper primed sound
 - /cobwebs > spawns 9 cobwebs at player's feet
 - /carvedpumpkin > Makes player wear a carved pumpkin for 30 seconds
+- /mob <mob> > Spawns a mob at player's location (skeleton, warden, zombie, spider, creeper)
+- /potion bad/good
+- /villagers > Spawns 50 villagers at player
+- /pigstep > Plays pigstep music disc
+- /fire > Sets player on fire for 10 seconds

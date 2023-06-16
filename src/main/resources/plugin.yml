@@ -8,39 +8,49 @@ api-version: 1.19
 commands:
   bees:
     description: Spawns bees
-    usage: /<command>
   carvedpumpkin:
     description: Sets player's helmet to carved pumpkin
-    usage: /<command>
     aliases: [cv]
   target:
     description: Set target player
-    usage: /<command> player
     aliases: [tg]
   choruseffect:
     description: Gives player chorus effect
-    usage: /<command>
     aliases: [ce]
   cobwebs:
     description: Spawns cobwebs
-    usage: /<command>
     aliases: [cws]
   explodeore:
     description: Makes next ore mined explode
-    usage: /<command>
     aliases: [eo]
   fakecreeper:
     description: Spawns fake creeper
-    usage: /<command>
     aliases: [fc]
   dropitems:
     description: Drops items from player's inventory
-    usage: /<command>
     aliases: [di]
   ride:
     description: Makes player ride assortment of entities
-    usage: /<command>
   potion:
     description: Gives player potion effect
-    usage: /<command>
     aliases: [pe]
+  spin:
+    description: Spins the wheel
+  adventure:
+    description: Sets player's gamemode to adventure
+    aliases: [ad]
+  mob:
+    description: Spawns mob
+  villagers:
+    description: Spawns 50 Villagers
+  pigstep:
+    description: Plays pigstep
+    aliases: [ps]
+  goodwheel:
+    description: Spins the good wheel
+    aliases: [gw]
+  badwheel:
+    description: Spins the bad wheel
+    aliases: [bw]
+  fire:
+    description: Sets player on fire

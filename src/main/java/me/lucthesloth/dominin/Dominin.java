@@ -21,6 +21,14 @@ public final class Dominin extends JavaPlugin {
         Objects.requireNonNull(getCommand("dropitems")).setExecutor(new me.lucthesloth.dominin.commands.dropitems());
         Objects.requireNonNull(getCommand("ride")).setExecutor(new me.lucthesloth.dominin.commands.ride());
         Objects.requireNonNull(getCommand("potion")).setExecutor(new me.lucthesloth.dominin.commands.potion());
+        Objects.requireNonNull(getCommand("spin")).setExecutor(new me.lucthesloth.dominin.commands.spin());
+        Objects.requireNonNull(getCommand("goodwheel")).setExecutor(new me.lucthesloth.dominin.commands.goodwheel());
+        Objects.requireNonNull(getCommand("badwheel")).setExecutor(new me.lucthesloth.dominin.commands.badwheel());
+        Objects.requireNonNull(getCommand("adventure")).setExecutor(new me.lucthesloth.dominin.commands.adventure());
+        Objects.requireNonNull(getCommand("mob")).setExecutor(new me.lucthesloth.dominin.commands.mob());
+        Objects.requireNonNull(getCommand("villagers")).setExecutor(new me.lucthesloth.dominin.commands.villagers());
+        Objects.requireNonNull(getCommand("pigstep")).setExecutor(new me.lucthesloth.dominin.commands.pigstep());
+        Objects.requireNonNull(getCommand("fire")).setExecutor(new me.lucthesloth.dominin.commands.fire());
         getServer().getPluginManager().registerEvents(new me.lucthesloth.dominin.EventListener(), this);
     }
 

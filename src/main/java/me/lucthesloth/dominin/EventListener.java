@@ -1,7 +1,11 @@
 package me.lucthesloth.dominin;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.player.PlayerMoveEvent;
 
 public class EventListener implements org.bukkit.event.Listener{
     public static boolean explodeNextOre = false;
@@ -14,5 +18,9 @@ public class EventListener implements org.bukkit.event.Listener{
             event.getBlock().getLocation().createExplosion(3f, false, false);
             explodeNextOre = false;
         }
+    }
+    @EventHandler
+    public void onInventoryMove(InventoryClickEvent event) {
+        if (event.getInventory().getHolder() == null) event.setCancelled(true);
     }
 }

@@ -15,17 +15,19 @@ public class potion implements CommandExecutor {
             sender.sendMessage("No target.");
             return false;
         }
-        double r = Math.floor(Math.random() * 6);
-        PotionEffect potion = switch ((int) r) {
-            case 0 -> new PotionEffect(PotionEffectType.BLINDNESS, 30, 1);
-            case 1 -> new PotionEffect(PotionEffectType.CONFUSION, 30, 1);
-            case 2 -> new PotionEffect(PotionEffectType.HUNGER, 30, 1);
-            case 3 -> new PotionEffect(PotionEffectType.FAST_DIGGING, 30, 1);
-            case 4 -> new PotionEffect(PotionEffectType.SPEED, 30, 1);
-            default -> new PotionEffect(PotionEffectType.REGENERATION, 30, 1);
-        };
-        Dominin.target.addPotionEffect(potion);
-        sender.sendMessage("Added potion effect to target > " + potion.getType().getName());
+        if (args.length != 1) {
+            sender.sendMessage("/potion <effect>");
+            return false;
+        }
+        if (args[0].equalsIgnoreCase("bad")) {
+            Dominin.target.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 30*20, 1));
+            Dominin.target.addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 30*20, 1));
+        } else if (args[0].equalsIgnoreCase("regen")){
+            Dominin.target.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 3*60*20, 1));
+        } else {
+            sender.sendMessage("Invalid effect.");
+            return false;
+        }
         return false;
     }
 }
