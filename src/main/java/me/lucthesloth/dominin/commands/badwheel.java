@@ -91,9 +91,15 @@ public class badwheel implements CommandExecutor {
     private final ItemStack noteblock3 = createItem(new ItemStack(Material.NOTE_BLOCK), ChatColor.translateAlternateColorCodes('&', "&8Note Block"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dChange texturepack! Pack #3")});
     private final ItemStack noteblock4 = createItem(new ItemStack(Material.NOTE_BLOCK), ChatColor.translateAlternateColorCodes('&', "&8Note Block"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dChange texturepack! Pack #4")});
     private final ItemStack noteblock5 = createItem(new ItemStack(Material.NOTE_BLOCK), ChatColor.translateAlternateColorCodes('&', "&8Note Block"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dChange texturepack! Pack #5")});
+    private final ItemStack chickenegg = createItem(new ItemStack(Material.CHICKEN_SPAWN_EGG), ChatColor.translateAlternateColorCodes('&', "&aChicken Egg"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dE G G S")});
+    private final ItemStack fishingrod = createItem(new ItemStack(Material.FISHING_ROD), ChatColor.translateAlternateColorCodes('&', "&aFishing Rod"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dHEAVENLY CHASES WILVEN WITH A FISHING ROD.")});
+    private final ItemStack musicdisc = createItem(new ItemStack(Material.MUSIC_DISC_11), ChatColor.translateAlternateColorCodes('&', "&aMusic Disc"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dBOB Can only speak german for 3 minutes")});
+    private final ItemStack wool = createItem(new ItemStack(Material.WHITE_WOOL), ChatColor.translateAlternateColorCodes('&', "&aWool"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dBOB pretends that he is not able to hear Wilven for 30 seconds")});
+    private final ItemStack redstonelamp = createItem(new ItemStack(Material.REDSTONE_LAMP), ChatColor.translateAlternateColorCodes('&', "&aRedstone Lamp"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dBOB needs to close Wilven's stream for 3 minutes")});
+    private final ItemStack enderdragonegg = createItem(new ItemStack(Material.DRAGON_EGG), ChatColor.translateAlternateColorCodes('&', "&aDragon Egg"), new String[] {ChatColor.translateAlternateColorCodes('&', "&dPlay end credits")});
     private final ItemStack filler = createItem(new ItemStack(Material.BLACK_STAINED_GLASS_PANE), ChatColor.translateAlternateColorCodes('&', " "), new String[] {ChatColor.translateAlternateColorCodes('&', "&dFiller.")});
 
-    private final ItemStack[] BadIncentive = {noteblock1,noteblock2,noteblock3,noteblock4,noteblock5,chorus, honeycomb, carved, cobweb, chest, gunpowder, diamondore, minecart, badpotion, shield, pigstep, villageregg,zombieegg, spideregg, skeletonegg, leatherboots, creeperegg, wardenegg, fire};
+    private final ItemStack[] BadIncentive = {noteblock1,noteblock2,noteblock3,noteblock4,noteblock5,chorus, honeycomb, carved, cobweb, chest, gunpowder, diamondore, minecart, badpotion, shield, pigstep, villageregg,zombieegg, spideregg, skeletonegg, leatherboots, creeperegg, wardenegg, fire, chickenegg, fishingrod, musicdisc, wool, redstonelamp, enderdragonegg};
     private ItemStack[] _items = {};
 
     private void shiftItemsOne(ItemStack[] c) {
