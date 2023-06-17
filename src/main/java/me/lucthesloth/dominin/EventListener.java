@@ -15,6 +15,7 @@ public class EventListener implements org.bukkit.event.Listener{
     public static boolean primedtntonkill = false;
     @EventHandler
     public void onOreBreak(org.bukkit.event.block.BlockBreakEvent event) {
+        if (!explodeNextOre) return;
         Material blockType = event.getBlock().getType();
         if (blockType == Material.DIAMOND_ORE || blockType == Material.EMERALD_ORE || blockType == Material.GOLD_ORE || blockType == Material.IRON_ORE || blockType == Material.LAPIS_ORE || blockType == Material.REDSTONE_ORE ||
         blockType == Material.DEEPSLATE_DIAMOND_ORE || blockType == Material.DEEPSLATE_EMERALD_ORE || blockType == Material.DEEPSLATE_GOLD_ORE || blockType == Material.DEEPSLATE_IRON_ORE || blockType == Material.DEEPSLATE_LAPIS_ORE || blockType == Material.DEEPSLATE_REDSTONE_ORE

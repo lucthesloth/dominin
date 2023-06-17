@@ -21,8 +21,7 @@ public class mob implements CommandExecutor {
             sender.sendMessage("Usage: /mob <mob>");
             return false;
         }
-        Location t = Dominin.target.getLocation().add(Math.random()*10 - 5, 0, Math.random()*10 - 5);
-        t = t.getWorld().getHighestBlockAt(t).getLocation().add(0,1,0);
+        Location t = Dominin.target.getLocation().add(Math.random()*10 - 5, 1, Math.random()*10 - 5);
         Monster e = (Monster) Dominin.target.getWorld().spawnEntity(t, switch(args[0].toLowerCase()) {
             case "creeper" -> EntityType.CREEPER;
             case "zombie" -> EntityType.ZOMBIE;
