@@ -13,3 +13,5 @@ Commands:
 - /villagers > Spawns 50 villagers at player
 - /pigstep > Plays pigstep music disc
 - /fire > Sets player on fire for 10 seconds
+- /goodwheel <any> > If parameter is present it resets the wheel before spinning
+- /badwheel <any> > If parameter is present it resets the wheel before spinning
