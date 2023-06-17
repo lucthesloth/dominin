@@ -31,6 +31,7 @@ public class carvedpumpkin implements CommandExecutor {
                 if (Dominin.target != null && Dominin.target.isOnline()){
                     if (Dominin.target.getInventory().getHelmet().getType() == org.bukkit.Material.CARVED_PUMPKIN)
                         Dominin.target.getInventory().setHelmet(null);
+                    task = null;
                     sender.sendMessage("Removed carved pumpkin from target.");
                 }
             }, 20 * 30);
