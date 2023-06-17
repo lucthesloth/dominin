@@ -54,3 +54,6 @@ commands:
     aliases: [bw]
   fire:
     description: Sets player on fire
+  tntonkill:
+    description: Spawns primed tnt on next kill
+    aliases: [tk]

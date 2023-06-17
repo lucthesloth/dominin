@@ -29,6 +29,7 @@ public final class Dominin extends JavaPlugin {
         Objects.requireNonNull(getCommand("villagers")).setExecutor(new me.lucthesloth.dominin.commands.villagers());
         Objects.requireNonNull(getCommand("pigstep")).setExecutor(new me.lucthesloth.dominin.commands.pigstep());
         Objects.requireNonNull(getCommand("fire")).setExecutor(new me.lucthesloth.dominin.commands.fire());
+        Objects.requireNonNull(getCommand("tntonkill")).setExecutor(new me.lucthesloth.dominin.commands.tntonkill());
         getServer().getPluginManager().registerEvents(new me.lucthesloth.dominin.EventListener(), this);
     }
 

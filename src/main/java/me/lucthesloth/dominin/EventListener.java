@@ -3,12 +3,16 @@ package me.lucthesloth.dominin;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.TNTPrimed;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 
 public class EventListener implements org.bukkit.event.Listener{
     public static boolean explodeNextOre = false;
+    public static boolean primedtntonkill = false;
     @EventHandler
     public void onOreBreak(org.bukkit.event.block.BlockBreakEvent event) {
         Material blockType = event.getBlock().getType();
@@ -22,5 +26,15 @@ public class EventListener implements org.bukkit.event.Listener{
     @EventHandler
     public void onInventoryMove(InventoryClickEvent event) {
         if (event.getInventory().getHolder() == null) event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onEntityDeath(EntityDeathEvent event){
+        if (primedtntonkill && event.getEntity().getKiller() == Dominin.target){
+            Location loc = event.getEntity().getLocation();
+            TNTPrimed tnt = (TNTPrimed) loc.getWorld().spawnEntity(loc.add(0, 2, 0), EntityType.PRIMED_TNT);
+            tnt.setFuseTicks(80);
+            primedtntonkill = false;
+        }
     }
 }
